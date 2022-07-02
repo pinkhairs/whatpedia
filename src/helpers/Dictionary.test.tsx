@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
-import { getReverseWords } from './helpers/Dictionary';
+import { getReverseWords } from './Dictionary';
 
 test('words output as text input is populated', () => {
   // arrange
-  const input = 'word';
+  const input = 'e';
   // act
   const result = getReverseWords(input);
   // assert
