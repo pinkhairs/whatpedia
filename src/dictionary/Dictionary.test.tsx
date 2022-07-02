@@ -8,7 +8,7 @@ test('words output as text input is populated', () => {
   // act
   const result = getReverseWords(input);
   // assert
-  expect(result.length).toBeGreaterThanOrEqual(1);
+  expect(Object.keys(result).length).toBeGreaterThanOrEqual(1);
 });
 
 test('show a message when no results', () => {
