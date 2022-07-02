@@ -9,7 +9,7 @@ test('words output as text input is populated', () => {
   // act
   const result = getReverseWords(input);
   // assert
-  expect(result).toBeTruthy();
+  expect(result.length).toBeGreaterThanOrEqual(1);
 });
 
 test('show a message when no results', () => {
@@ -28,5 +28,5 @@ test('word list clears when input is empty', () => {
   // act
   const result = getReverseWords(input);
   // assert
-  expect(result).toBe('');
+  expect(result).toBe([]);
 });
