@@ -1,0 +1,7 @@
+{
+  "name": "whatpedia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
