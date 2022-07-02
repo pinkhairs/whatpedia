@@ -1,8 +1,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import { getReverseWords } from '../helpers/Dictionary';
 
 const Home: React.FC = () => {
+  getReverseWords('word');
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +16,6 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
       </IonContent>
     </IonPage>
   );
