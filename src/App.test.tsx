@@ -1,37 +1,32 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-
-test('renders without crashing', () => {
-  const { baseElement } = render(<App />);
-  expect(baseElement).toBeDefined();
-});
+import { getReverseWords } from './helpers/Dictionary';
 
 test('words output as text input is populated', () => {
   // arrange
   const input = 'word';
   // act
-  const result = getWords(input);
+  const result = getReverseWords(input);
   // assert
   expect(result).toBeTruthy();
 });
 
 test('show a message when no results', () => {
   // arrange
-  const input = 'blahdeeblahgoo';
+  const input = 'blahblahblahgoobledeegook';
+  const expected = 'No results found';
   // act
-  
+  const result = getReverseWords(input);
   // assert
-});
-
-test('word is copied to clipboard when selected', () => {
-  // arrange
-  // act
-  // assert
+  expect(result).toBe(expected);
 });
 
 test('word list clears when input is empty', () => {
   // arrange
+  const input = '';
   // act
+  const result = getReverseWords(input);
   // assert
+  expect(result).toBe('');
 });
